@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>HelloWorldATV</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.example.helloworldatv</string>
+
+    <key>CFBundleName</key>
+    <string>Hello World</string>
+
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <!-- Kodi の Info.plist に存在するキー群 -->
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>iPhoneOS</string>
+    </array>
+
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+
+    <key>MinimumOSVersion</key>
+    <string>4.2</string>
+
+    <!-- Frontrow Appliance 必須キー -->
+    <key>NSPrincipalClass</key>
+    <string>HelloWorldAppliance</string>
+
+    <key>FRApplianceName</key>
+    <string>Hello World</string>
+
+    <!-- Kodi と同じ: FRApplianceDataSourceType = Al -->
+    <key>FRApplianceDataSourceType</key>
+    <string>Al</string>
+
+    <!-- カテゴリなしでも非表示にしない -->
+    <key>FRHideIfNoCategories</key>
+    <false/>
+
+    <!-- 表示順 (Kodi と同じ値) -->
+    <key>FRAppliancePreferedOrder</key>
+    <integer>0</integer>
+
+    <!-- アイコン -->
+    <key>CFBundleIconFile</key>
+    <string>AppIcon.png</string>
+
+    <key>UIDeviceFamily</key>
+    <array>
+        <integer>2</integer>
+        <integer>3</integer>
+    </array>
+</dict>
+</plist>

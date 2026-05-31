@@ -1,0 +1,8 @@
+Package: com.example.helloworldatv
+Name: Hello World ATV
+Version: 1.0-4
+Architecture: iphoneos-arm
+Description: Hello World frappliance for Apple TV 2/3
+Maintainer: Your Name <you@example.com>
+Author: Your Name <you@example.com>
+Section: Appliances

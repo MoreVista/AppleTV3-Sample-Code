@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Info.plist  —  HelloWorldATV.frappliance
+  project.pbxproj (Kodi 14.2-Helix / Kodi-ATV2 ターゲット) の
+  XBMCATV2-Info.plist を参考に作成。
+-->
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+
+    <key>CFBundleExecutable</key>
+    <string>HelloWorldATV</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.example.helloworldatv</string>
+
+    <key>CFBundleName</key>
+    <string>Hello World</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+
+    <!--
+      TARGETED_DEVICE_FAMILY = "2,3" (project.pbxproj より確認)
+        2 = iPad (ATV2 は内部的に iPad 扱い)
+        3 = Apple TV
+    -->
+    <key>UIDeviceFamily</key>
+    <array>
+        <integer>2</integer>
+        <integer>3</integer>
+    </array>
+
+    <!-- Frontrow Appliance の必須キー -->
+    <key>FRApplianceName</key>
+    <string>Hello World</string>
+
+    <key>FRApplianceCategory</key>
+    <string>FRDefaultApplianceCategory</string>
+
+    <!--
+      NSPrincipalClass: ランタイムで登録したクラス名と一致させる
+      → initApplianceRuntimeClasses() で登録した "HelloWorldAppliance"
+    -->
+    <key>NSPrincipalClass</key>
+    <string>HelloWorldAppliance</string>
+</dict>
+</plist>
