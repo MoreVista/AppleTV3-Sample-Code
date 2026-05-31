@@ -110,12 +110,29 @@ cp /tmp/nitoTV/substrate/substrate.h $THEOS/include/
 ```bash
 cd HelloWorldATV/
 ```
-~~# Apple TV の IP アドレスを設定~~
-~~export THEOS=/opt/theos~~
-~~export THEOS_DEVICE_IP=192.168.x.x~~
+~~# Apple TV の IP アドレスを設定~~ <br>
+~~export THEOS=/opt/theos~~ <br>
+~~export THEOS_DEVICE_IP=192.168.x.x~~ <br>
+```
 bash build.sh
-~~# → clean → build → stage → install → killall AppleTV~~
-現状インストール処理が動きません。ビルドまでは行えますが、インストールは方法Cに従ってください。
+```
+~~# → clean → build → stage → install → killall AppleTV~~ <br>
+現状自動インストール処理が動きません。インストールは以下の方法に従ってください。<br>
+```
+# SCPでdebを転送
+scp -r \                                                                   
+  -oHostKeyAlgorithms=+ssh-rsa \
+  -oPubkeyAcceptedKeyTypes=+ssh-rsa \
+  /path/to/deb/com.example.helloworldatv_1.0-4.deb  \
+  root@AppleTV_IP:/var/root/Media/tmp/
+
+# SSHで接続
+ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa root@AppleTV_IP
+
+#dpkgでインストール
+cd Media/tmp/
+dpkg -i ./com.example.helloworldatv_1.0-4.deb
+  ```
 
 
 ### 方法 B : make を個別実行
