@@ -109,14 +109,14 @@ cp /tmp/nitoTV/substrate/substrate.h $THEOS/include/
 
 ```bash
 cd HelloWorldATV/
-
+```
 ~~# Apple TV の IP アドレスを設定~~
 ~~export THEOS=/opt/theos~~
 ~~export THEOS_DEVICE_IP=192.168.x.x~~
-現状正常に動きません。ビルドまでは行えますが、インストールは方法Cに従ってください。
 bash build.sh
-# → clean → build → stage → install → killall AppleTV
-```
+~~# → clean → build → stage → install → killall AppleTV~~
+現状インストール処理が動きません。ビルドまでは行えますが、インストールは方法Cに従ってください。
+
 
 ### 方法 B : make を個別実行
 
