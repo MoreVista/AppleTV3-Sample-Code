@@ -145,8 +145,9 @@ export THEOS_DEVICE_PORT=22
 make clean
 make
 make stage
-make install
 ```
+~~make install~~
+make install は動きません。方法Aに書いたインストール方法に従ってください
 
 ### 方法 C : 手動で scp インストール
 
